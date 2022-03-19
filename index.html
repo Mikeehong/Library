@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/7aea6e7084.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>My Library</h1>
+        <button class="addBtn">Add a Book</button>
+    </header>
+
+    <div class="books">
+        <div class="book example">
+            <div class="info">
+                <p>Title</p>
+                <p>Author</p>
+                <p>Number of Pages</p>
+            </div>
+            <button class="removeBtn"><i class="fa-solid fa-eraser"> R e m o v  e</i></button>
+            
+            <button class="statusBtn">READ</button>
+        </div>
+    </div>
+
+    <form class="form">
+        <div class="fields">
+            <div class="field">
+                <label for="title">Title</label><br>
+                <input type="text" id="title" name="title">
+            </div>
+          
+            <div class="field">
+                <label for="author">Author</label><br>
+                <input type="text" id="author" name="author">
+            </div>
+    
+            <div class="field">
+                <label for="page">Number of pages</label><br>
+                <input type="text" id="page" name="page">
+            </div>
+    
+            <div class="field">
+                <input type="checkbox" id="status" name="status">
+                <label for="status">I Have Read This</label>
+            </div>
+    
+            <button class="submitBtn">Submit</button>
+        </div>
+    </form>
+    <div id="overlay"></div>
+
+</body>
+</html>
