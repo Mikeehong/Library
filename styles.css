@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: rgba(182, 182, 182, 0.555);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 20vh;
+  background-color: rgba(241, 195, 109, 0.733);
+  font-size: 1.5rem;
+  color: rgb(37, 37, 37);
+  border-bottom: 5px solid rgba(145, 81, 9, 0.418);
+}
+
+.addBtn {
+  position: absolute;
+  right: 2rem;
+  top: 4.5rem;
+  padding: 0.9rem 3rem;
+  background-color: rgba(145, 81, 9, 0.418);
+  border: 3px solid rgba(0, 0, 0, 0.425);
+  border-radius: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.addBtn:hover {
+  opacity: 0.8;
+  box-shadow: 5px 5px 5px 0px rgb(180, 180, 180);
+  background-color: rgb(238, 157, 111);
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 5px solid rgba(145, 81, 9, 0.418);
+  border-radius: 12px;
+  width: 250px;
+  height: 300px;
+  margin: 2rem 1rem;
+  background-color: rgb(235, 230, 205);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+}
+
+.info {
+  margin-top: 50px;
+}
+
+.removeBtn {
+  width: 8rem;
+  height: 2rem;
+}
+
+.statusBtn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  border: none;
+  width: 100%;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background-color: rgba(119, 219, 132, 0.603);
+  cursor: pointer;
+}
+
+.statusBtn:hover {
+  opacity: 0.8;
+}
+
+.statusBtn.notRead {
+  background-color: rgb(230, 123, 123);
+}
+
+/* Popup Form */
+form {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 32%;
+  left: 25%;
+  width: 50vw;
+  height: 50vh;
+  background-color: rgb(155, 173, 173);
+  border: 5px solid rgb(150, 150, 150);
+  border-radius: 12px;
+  transform: scale(0);
+  transition: all 0.5s;
+  z-index: 5;
+}
+
+form.active {
+  transform: scale(1);
+}
+
+.field input[type='text'] {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  font-size: 20px;
+}
+
+.fields button {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+.field {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  width: 300px;
+  margin: 1.5rem;
+}
