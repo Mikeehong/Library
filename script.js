@@ -24,12 +24,15 @@ const exampleBook = document.querySelector('.example')
 removeBtn.addEventListener('click', () => removeBook(exampleBook))
 const form = document.querySelector('.form')
 
+const overlay = document.getElementById('overlay')
+overlay.addEventListener('click', () => {
+    closeForm()
+})
+
 
 function removeBook(chosenBook) {
     const books = document.querySelector('.books')
     books.removeChild(chosenBook)
-    
-
 }
 
 // function updateLibrary(newbook) {
@@ -59,12 +62,19 @@ function addBookToLibrary(e) {
     myLibrary.push(book)
     createBooks(book)
     form.reset()
+    closeForm()
 }
 
 function showForm() {
     form.classList.add('active')
-    submitBtn.addEventListener('click', () => form.classList.remove('active'))
+    overlay.classList.add('active')
 }
+
+function closeForm() {
+    form.classList.remove('active')
+    overlay.classList.remove('active')
+}
+
 
 function createBooks(book) {
     const bookGroup = document.querySelector('.books')
@@ -86,6 +96,7 @@ function createBooks(book) {
     bookPages.innerText = book.page
     removeBtn.innerText = "REMOVE"
     statusBtn.innerText = book.status ? "READ" : "NOT READ"
+
     if (statusBtn.innerText === "NOT READ") {
         statusBtn.classList.add('notRead')
     }

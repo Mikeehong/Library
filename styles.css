@@ -8,6 +8,13 @@ h1 {
   padding: 0;
 }
 
+p {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -70,12 +77,13 @@ header {
 }
 
 .info {
-  margin-top: 50px;
+  margin: 10px 0;
 }
 
 .removeBtn {
   width: 8rem;
   height: 2rem;
+  margin-bottom: 1rem;
 }
 
 .statusBtn {
@@ -107,7 +115,7 @@ form {
   top: 32%;
   left: 25%;
   width: 50vw;
-  height: 50vh;
+  height: 60vh;
   background-color: rgb(155, 173, 173);
   border: 5px solid rgb(150, 150, 150);
   border-radius: 12px;
@@ -138,5 +146,21 @@ form.active {
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
   width: 300px;
-  margin: 1.5rem;
+  margin: 20px 0;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.438);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
